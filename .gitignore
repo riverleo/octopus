@@ -1,0 +1,4 @@
+schema.json
+/models/
+.DS_Store
+*.swp

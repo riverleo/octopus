@@ -1,0 +1,4 @@
+*.swp
+.schema
+db.json
+config.yaml

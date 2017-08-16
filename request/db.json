@@ -1,0 +1,152 @@
+{
+  "url": "root:root@(:3306)/",
+  "adapter": "mysql",
+  "env": "local",
+  "tables": {
+    "user": {
+      "name": "user",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "null": false,
+          "key": "PRI",
+          "default": "",
+          "extra": ""
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(100)",
+          "null": false,
+          "key": "",
+          "default": "",
+          "extra": ""
+        }
+      }
+    },
+    "role": {
+      "name": "role",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "null": false,
+          "key": "PRI",
+          "default": "",
+          "extra": ""
+        },
+        "userId": {
+          "name": "user_id",
+          "type": "int",
+          "null": false,
+          "key": "",
+          "default": "",
+          "extra": ""
+        },
+        "createdAt": {
+          "name": "created_at",
+          "type": "varchar(10)",
+          "null": false,
+          "key": "",
+          "default": "",
+          "extra": ""
+        }
+      }
+    },
+    "roleType": {
+      "name": "role_type",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "null": false,
+          "key": "PRI",
+          "default": "",
+          "extra": ""
+        },
+        "roleId": {
+          "name": "role_id",
+          "type": "int",
+          "null": false,
+          "key": "",
+          "default": "",
+          "extra": ""
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(10)",
+          "null": false,
+          "key": "",
+          "default": "",
+          "extra": ""
+        }
+      }
+    },
+    "article": {
+      "name": "article",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "null": false,
+          "key": "PRI",
+          "default": "",
+          "extra": ""
+        },
+        "userId": {
+          "name": "user_id",
+          "type": "int",
+          "null": true,
+          "key": "",
+          "default": "",
+          "extra": ""
+        },
+        "text": {
+          "name": "text",
+          "type": "text",
+          "null": true,
+          "key": "",
+          "default": "",
+          "extra": ""
+        }
+      }
+    },
+    "comment": {
+      "name": "comment",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "null": false,
+          "key": "PRI",
+          "default": "",
+          "extra": ""
+        },
+        "articleId": {
+          "name": "article_id",
+          "type": "int",
+          "null": true,
+          "key": "",
+          "default": "",
+          "extra": ""
+        },
+        "userId": {
+          "name": "user_id",
+          "type": "int",
+          "null": true,
+          "key": "",
+          "default": "",
+          "extra": ""
+        },
+        "text": {
+          "name": "text",
+          "type": "varchar(100)",
+          "null": true,
+          "key": "",
+          "default": "",
+          "extra": ""
+        }
+      }
+    }
+  }
+}

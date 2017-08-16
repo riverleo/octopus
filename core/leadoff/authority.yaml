@@ -1,0 +1,12 @@
+# Authority Example
+#
+# default: hasRole(user) # Set default permissions for all models.
+# models:
+#   book:
+#     default: hasRole(admin) # Set default permissions for book models.
+#     fields: # Set permissions on specific fields.
+#       lastIp: hasRole("admin")
+#       password: # You can also set multiple permissions. the following conditions are judged as hasId(.userId) || hasRole("admin").
+#         - hasId(=id) # Compare the value as book.userId == currentUser.id
+#         - hasRole("admin")
+#   article: hasRole("user") # If you do not need to set permissions on a per-field basis, you might use as this.`

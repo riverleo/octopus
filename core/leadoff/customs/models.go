@@ -1,7 +1,7 @@
 package customs
 
 import (
-	"github.com/wanteddev/rice/request"
+	"github.com/finwhale/octopus/request"
 )
 
 func init() {

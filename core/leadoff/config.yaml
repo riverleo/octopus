@@ -1,0 +1,25 @@
+paging:
+  limit: 10
+  maxLimit: 50
+  offset: 0
+database:
+  default: &default
+    adapter: mysql
+    charset: utf8
+  test:
+    <<: *default
+    schema: octopus_test_db
+  local:
+    <<: *default
+    schema: octopus_db
+    #
+    # Please enter your custom settings below
+    #
+    # nextweek:
+    #   <<: *default
+    #   database: 127.0.0.1 (default)
+    #   username: root (default)
+    #   password: root (default)
+    #   port: 3306 (default)
+    #   plural: false (default)
+    #   logmode: false (default)

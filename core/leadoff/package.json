@@ -1,7 +1,7 @@
 {
-  "name": "rice",
+  "name": "octopusParser",
   "version": "1.0.0",
-  "description": "GraphQL query parsing server for Rice",
+  "description": "GraphQL query parsing server for Octopus",
   "main": "index.js",
   "scripts": {
     "dev": "node server.js",

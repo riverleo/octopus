@@ -9,11 +9,11 @@ const {
 const { mergeSchema, updateQuery } = require('./merge');
 const createMock = require('./mock');
 const createRequest = require('./request');
-const { ricePort } = require('../graphql');
+const { octopusPort } = require('../graphql');
 const { types, query, scalars } = require('./types');
 const { updateQueryFromSchema } = require('./types/query');
 
-module.exports = ({ ricePort }) => {
+module.exports = ({ octopusPort }) => {
   var schema = new GraphQLSchema({ types, query });
 
   const customSchemaPath = `${__dirname}/../custom.graphql`;
@@ -30,7 +30,7 @@ module.exports = ({ ricePort }) => {
     field.resolve = (parent, args, req, ast) => {
       const type = field.type;
       const request = createRequest(req, { ast, type, args });
-      const output = axios.post(`http://localhost:${ricePort}`, request, { headers: req.headers }).then(res => res.data);
+      const output = axios.post(`http://localhost:${octopusPort}`, request, { headers: req.headers }).then(res => res.data);
 
       if (output) {
         return output;

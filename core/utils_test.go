@@ -13,7 +13,7 @@ func TestCheck(t *testing.T) {
 }
 
 func TestGetRootDir(t *testing.T) {
-	assert.True(t, strings.HasSuffix(GetRootDir(), "/rice"))
+	assert.True(t, strings.HasSuffix(GetRootDir(), "/octopus"))
 }
 
 func TestGetSchemaInfo(t *testing.T) {

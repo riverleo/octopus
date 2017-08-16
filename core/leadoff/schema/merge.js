@@ -68,7 +68,7 @@ exports.mergeSchema = (...schemas) => {
     try {
       mergedSchema = mergeSchema(mergedSchema, schema);
     } catch(e) {
-      console.error('fail to build custom.graphql\n', e);
+      console.warn('fail to build custom.graphql\n');
     }
   });
 

@@ -822,7 +822,7 @@ func parseQuery(c interface{}, n *Node, schema *core.Schema) (conditions []Condi
 				queries = append(queries, fmt.Sprintf("`%v`.`%v` = ?", table.Name, column.Name))
 				break
 			case NOT_EQUAL:
-				queries = append(queries, fmt.Sprintf("`%v`.`%v` = ?", table.Name, column.Name))
+				queries = append(queries, fmt.Sprintf("`%v`.`%v` != ?", table.Name, column.Name))
 				break
 			case IN:
 				queries = append(queries, fmt.Sprintf("`%v`.`%v` IN (?)", table.Name, column.Name))

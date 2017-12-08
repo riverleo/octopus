@@ -8,8 +8,10 @@ import (
 )
 
 func Install() {
-	Run("go get github.com/go-sql-driver/mysql")
+	Run("go get github.com/jinzhu/gorm")
+	Run("go get github.com/jinzhu/gorm/dialects/mysql")
 	Run("go get gopkg.in/yaml.v2")
+	Run("go get github.com/go-sql-driver/mysql")
 	Run("go get github.com/labstack/echo")
 	Run("go get github.com/labstack/echo/middleware")
 }
